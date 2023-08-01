@@ -12,4 +12,4 @@
 `docker compose run --rm app sh -c "python manage.py makemigration"`
 
 #### Apply migrations
-`docker compose run --rm app sh -c "python manage.py migrate"`
+`docker compose run --rm app sh -c "python manage.py wait_for_db && python manage.py migrate"`
